@@ -3,14 +3,13 @@ const excelToJson = require('convert-excel-to-json');
 const { v4: uuid } = require('uuid');
 const fs = require('fs');
 const _ = require('lodash');
-const { group } = require('console');
 
-if (!fs.existsSync('./MaiYea_Navigation.xlsx')) {
-    throw Error('MaiYea_Navigation.xlsx does not exist.');
+if (!fs.existsSync('./ekbuy_Navigation.xlsx')) {
+    throw Error('ekbuy_Navigation.xlsx does not exist.');
 }
 
 const result = excelToJson({
-    sourceFile: 'MaiYea_Navigation.xlsx',
+    sourceFile: 'ekbuy_Navigation.xlsx',
     columnToKey: {
         A: 'l1_cname',
         B: 'l1_ename',
